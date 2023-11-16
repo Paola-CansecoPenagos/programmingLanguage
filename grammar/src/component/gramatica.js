@@ -133,7 +133,7 @@ peg$SyntaxError.buildMessage = function(expected, found) {
   return "Expected " + describeExpected(expected) + " but " + describeFound(found) + " found.";
 };
 
-function peg$parse(input, options) {
+export function peg$parse(input, options) {
   options = options !== void 0 ? options : {};
 
   var peg$FAILED = {},
@@ -240,6 +240,7 @@ function peg$parse(input, options) {
       location
     );
   }
+
 
   function error(message, location) {
     location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
@@ -1374,7 +1375,7 @@ function peg$parse(input, options) {
   }
 }
 
-module.exports = {
+/*module.exports = {
   SyntaxError: peg$SyntaxError,
   parse:       peg$parse
-};
+};*/
